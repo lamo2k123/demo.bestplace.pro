@@ -1,0 +1,8 @@
+{
+    "dev-server.host"   : "0.0.0.0",
+    "dev-server.port"   : 8080,
+    "dev-server.proxy"  : [{}],
+
+    "server.host" : "localhost",
+    "server.port" : 4000
+}

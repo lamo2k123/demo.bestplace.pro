@@ -1,0 +1,54 @@
+:global {
+
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        min-width: 220px;
+        font-size: 14px;
+        font-weight: 300;
+        font-family: Raleway, "Helvetica Neue", Helvetica, Arial, sans-serif;
+        background-color: #fafcfe;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a,
+    input {
+        outline: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    input,
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    img { border: 0; }
+
+}
+
+:local {
+
+    .application {
+        min-width: 160px;
+        transition: filter 0.4s;
+
+        &[data-blur="true"] {
+            filter: blur(2px);
+        }
+
+    }
+
+}

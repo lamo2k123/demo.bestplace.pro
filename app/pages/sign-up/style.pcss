@@ -1,0 +1,118 @@
+:local {
+
+    .sign-up {
+
+        &__border { border-top: solid 1px #d0d0d0; }
+
+        &__button {
+            display: block;
+            text-align: center;
+            color: #fff;
+            background-color: #008900;
+            font-size: 16px;
+            line-height: 46px;
+            height: 46px;
+            border: none;
+            font-weight: normal;
+            width: calc(100% - 30px);
+            margin: 12px auto;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+
+            &[data-pending="true"] {
+                background-image: linear-gradient(-70deg, transparent 32%, rgba(163, 229, 163, 0.5) 33%, rgba(163, 229, 163, 0.5) 66%, transparent 67%);
+                background-size: 40px 100%;
+                animation: spinner 1s linear infinite;
+            }
+
+            &[disabled] { background-color: #b9b9b9; }
+
+        }
+
+        &__label {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 15px;
+            padding: 10px 0;
+            font-size: 12px;
+            color: #44322d;
+            align-items: center;
+            box-sizing: border-box;
+
+            &[data-type="checkbox"] {
+                flex-wrap: nowrap;
+                align-items: flex-start;
+            }
+
+        }
+
+        &__error,
+        &__desc {
+            font-size: 12px;
+            color: #b00606;
+            line-height: 14px;
+            display: block;
+        }
+
+        &__error { margin: 0 15px; }
+
+        &__desc {
+            color: #777;
+
+            &[data-age] {
+                display: flex;
+                align-items: center;
+
+                &::before {
+                    content: attr(data-age);
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background-color: #e62828;
+                    line-height: 20px;
+                    text-align: center;
+                    border: solid 2px #fff;
+                    box-shadow: 0 0 0 1px #e62828;
+                    font-size: 10px;
+                    color: #fff;
+                    border-radius: 50%;
+                    margin-right: 8px;
+                }
+
+            }
+
+            &_margin_15 {
+                margin: 15px;
+            }
+
+        }
+
+        &__checkbox-title {
+            display: block;
+            font-size: 12px;
+            color: #000;
+            line-height: 14px;
+            text-align: left;
+            padding-left: 10px;
+            margin-top: 4px;
+            box-sizing: border-box;
+
+            & > a {
+                color: #007253;
+                text-decoration: underline;
+            }
+
+        }
+
+    }
+
+}
+
+@keyframes :local(spinner) {
+
+    0% { background-position-x: 0; }
+
+    100% { background-position-x: 40px; }
+
+}

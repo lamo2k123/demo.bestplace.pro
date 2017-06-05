@@ -1,0 +1,5 @@
+public/
+webpack/
+node_modules/
+configs/
+__tests__/
